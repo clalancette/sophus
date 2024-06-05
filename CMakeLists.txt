@@ -61,6 +61,9 @@ if(NOT TARGET fmt::fmt)
   find_package(fmt)
 endif()
 
+if(NOT TARGET Ceres::ceres)
+  find_package(Ceres REQUIRED)
+endif()
 
 # Define interface library target
 add_library(sophus INTERFACE)
@@ -120,6 +123,9 @@ else()
   set(fmt_DEPENDENCY "find_dependency (fmt ${fmt_VERSION})")
   message(STATUS "Turning basic logging OFF")
 endif()
+
+target_link_libraries(sophus INTERFACE Ceres::ceres)
+set(Ceres_DEPENDENCY "find_dependency (Ceres ${Ceres_VERSION})")
 
 # Associate target with include directory
 target_include_directories(sophus INTERFACE

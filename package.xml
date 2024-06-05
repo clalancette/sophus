@@ -36,6 +36,7 @@
 
   <build_depend>eigen</build_depend>
   <build_export_depend>eigen</build_export_depend>
+  <build_export_depend>libceres-dev</build_export_depend>
 
   <export>
     <build_type>cmake</build_type>

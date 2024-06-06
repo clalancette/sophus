@@ -22,7 +22,7 @@
   1.23.9000 -> upstream 1.23.0
   and so on...
   -->
-  <version>1.22.9100</version>
+  <version>1.22.9101</version>
   <description>
    C++ implementation of Lie Groups using Eigen.
   </description>
